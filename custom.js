@@ -14,7 +14,7 @@ document.getElementById("city1").addEventListener("click", () => {
         placeBtn[n].innerHTML = `${Places[n].name}`;
         placeBtn[n].addEventListener("click", (e) => {
             imageBox.innerHTML = `<img src=${Places[n].image} />`;
-            placeBtn[n].innerHTML = `${Places[n].name}`;
+            // placeBtn[n].innerHTML = `${Places[n].name}`;
             if(e.target.id === placeBtn[0].id){
                 e.target.style.backgroundColor = "rgb(192, 164, 8)";
                 placeBtn[1].style.backgroundColor =" gold";
@@ -50,7 +50,7 @@ document.getElementById("city2").addEventListener("click", () => {
         placeBtn[n].innerHTML = `${Places2[n].name}`;
         placeBtn[n].addEventListener("click", (e) => {
             imageBox.innerHTML = `<img src=${Places2[n].image} />`;
-            placeBtn[n].innerHTML = `${Places2[n].name}`;
+            // placeBtn[n].innerHTML = `${Places2[n].name}`;
             if(e.target.id === placeBtn[0].id){
                 e.target.style.backgroundColor = "rgb(192, 164, 8)";
                 placeBtn[1].style.backgroundColor =" gold";
@@ -85,7 +85,7 @@ document.getElementById("city3").addEventListener("click", () => {
         placeBtn[n].innerHTML = `${Places3[n].name}`;
         placeBtn[n].addEventListener("click", (e) => {
             imageBox.innerHTML = `<img src=${Places3[n].image} />`;
-            placeBtn[n].innerHTML = `${Places3[n].name}`;
+            // placeBtn[n].innerHTML = `${Places3[n].name}`;
             if(e.target.id === placeBtn[0].id){
                 e.target.style.backgroundColor = "rgb(192, 164, 8)";
                 placeBtn[1].style.backgroundColor =" gold";
