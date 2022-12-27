@@ -7,7 +7,6 @@ document.getElementById("city1").addEventListener("click", () => {
     places.innerHTML = "";
     buttonCreate();
     sehirResimDegistirme(Places)
-    imageBox.innerHTML = `<img src=${Places[0].image} />`;
     cityButtonCss(120,80,80);
 });
 
@@ -17,7 +16,6 @@ document.getElementById("city2").addEventListener("click", () => {
     places.innerHTML = "";
     buttonCreate();
     sehirResimDegistirme(Places2)
-    imageBox.innerHTML = `<img src=${Places2[0].image} />`;
     cityButtonCss(80,120,80);
 });
 
@@ -27,7 +25,6 @@ document.getElementById("city3").addEventListener("click", () => {
     places.innerHTML = "";
     buttonCreate();
     sehirResimDegistirme(Places3);
-    imageBox.innerHTML = `<img src=${Places3[0].image} />`;
     cityButtonCss(80,80,120);
 });
 
@@ -80,4 +77,5 @@ function sehirResimDegistirme(yerAdi){
             }
         });
     }
+    imageBox.innerHTML = `<img src=${yerAdi[0].image} />`;
 }
