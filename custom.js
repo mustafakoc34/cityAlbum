@@ -4,7 +4,6 @@ const places = document.getElementById("places");
 
 // *********************** Birinci Şehir */
 document.getElementById("city1").addEventListener("click", () => {
-    places.innerHTML = "";
     buttonCreate();
     sehirResimDegistirme(Places)
     cityButtonCss(120,80,80);
@@ -12,8 +11,6 @@ document.getElementById("city1").addEventListener("click", () => {
 
 //*********************** İkinci Şehir */
 document.getElementById("city2").addEventListener("click", () => {
-
-    places.innerHTML = "";
     buttonCreate();
     sehirResimDegistirme(Places2)
     cityButtonCss(80,120,80);
@@ -21,14 +18,13 @@ document.getElementById("city2").addEventListener("click", () => {
 
 //*********************** Üçüncü Şehir */
 document.getElementById("city3").addEventListener("click", () => {
-
-    places.innerHTML = "";
     buttonCreate();
     sehirResimDegistirme(Places3);
     cityButtonCss(80,80,120);
 });
 
 function buttonCreate(){
+    places.innerHTML = "";
     const placeBtn0 = document.createElement("button");
     placeBtn0.className = "placeBtn";
     placeBtn0.id ="no1";
@@ -51,8 +47,6 @@ function cityButtonCss(birim1,birim2,birim3){
     document.getElementById("city3").style.backgroundColor = "rgb(197, 98, 206)";
     document.getElementById("city3").style.width =`${birim3}px`;//120px
 }
-
-
 
 function sehirResimDegistirme(yerAdi){
     const placeBtn = document.querySelectorAll(".placeBtn");
