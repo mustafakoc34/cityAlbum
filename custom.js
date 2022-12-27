@@ -33,7 +33,7 @@ document.getElementById("city1").addEventListener("click", () => {
         });
     }
     imageBox.innerHTML = `<img src=${Places[0].image} />`;
-    istanbulButtonCss();
+    cityButtonCss(120,80,80);
 
 });
 
@@ -69,7 +69,7 @@ document.getElementById("city2").addEventListener("click", () => {
         });
     }
     imageBox.innerHTML = `<img src=${Places2[0].image} />`;
-    ankaraButtonCss();
+    cityButtonCss(80,120,80);
 });
 
 
@@ -104,10 +104,8 @@ document.getElementById("city3").addEventListener("click", () => {
         });
     }
     imageBox.innerHTML = `<img src=${Places3[0].image} />`;
-    izmirButtonCss();
+    cityButtonCss(80,80,120);
 });
-
-
 
 function buttonCreate(){
     
@@ -125,31 +123,13 @@ function buttonCreate(){
     places.appendChild(placeBtn2);
 }
 
-function izmirButtonCss(){
-    document.getElementById("city3").style.backgroundColor = "rgb(192, 164, 8)";
-    document.getElementById("city3").style.width ="120px";
-    document.getElementById("city2").style.backgroundColor = " rgb(197, 98, 206)";
-    document.getElementById("city2").style.width ="80px";
+function cityButtonCss(birim1,birim2,birim3){
     document.getElementById("city1").style.backgroundColor = " rgb(197, 98, 206)";
-    document.getElementById("city1").style.width ="80px";
-}
-
-function ankaraButtonCss(){
-    document.getElementById("city2").style.backgroundColor = "rgb(192, 164, 8)";
-    document.getElementById("city2").style.width ="120px";
-    document.getElementById("city1").style.backgroundColor = " rgb(197, 98, 206)";
-    document.getElementById("city1").style.width ="80px";
-    document.getElementById("city3").style.backgroundColor = " rgb(197, 98, 206)";
-    document.getElementById("city3").style.width ="80px";
-}
-
-function istanbulButtonCss(){
-    document.getElementById("city1").style.backgroundColor = "rgb(192, 164, 8)";
-    document.getElementById("city1").style.width ="120px";
+    document.getElementById("city1").style.width =`${birim1}px`;//80px
     document.getElementById("city2").style.backgroundColor = " rgb(197, 98, 206)";
-    document.getElementById("city2").style.width ="80px";
-    document.getElementById("city3").style.backgroundColor = " rgb(197, 98, 206)";
-    document.getElementById("city3").style.width ="80px";
+    document.getElementById("city2").style.width =`${birim2}px`;//80px
+    document.getElementById("city3").style.backgroundColor = "rgb(197, 98, 206)";
+    document.getElementById("city3").style.width =`${birim3}px`;//120px
 }
 
 
