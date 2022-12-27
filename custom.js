@@ -2,113 +2,36 @@
 const imageBox = document.querySelector(".imageBox");
 const places = document.getElementById("places");
 
-
-//*********************** Birinci Şehir */
+// *********************** Birinci Şehir */
 document.getElementById("city1").addEventListener("click", () => {
-
     places.innerHTML = "";
     buttonCreate();
-    const placeBtn = document.querySelectorAll(".placeBtn");
-
-    for (let n = 0; n < placeBtn.length; n++) {
-        placeBtn[n].innerHTML = `${Places[n].name}`;
-        placeBtn[n].addEventListener("click", (e) => {
-            imageBox.innerHTML = `<img src=${Places[n].image} />`;
-            // placeBtn[n].innerHTML = `${Places[n].name}`;
-            if(e.target.id === placeBtn[0].id){
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[1].style.backgroundColor =" gold";
-                placeBtn[2].style.backgroundColor =" gold";
-            } 
-            else if(e.target.id === placeBtn[1].id){
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[0].style.backgroundColor =" gold";
-                placeBtn[2].style.backgroundColor =" gold";
-            }else{
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[1].style.backgroundColor =" gold";
-                placeBtn[0].style.backgroundColor =" gold";
-            }
-            
-        });
-    }
+    sehirResimDegistirme(Places)
     imageBox.innerHTML = `<img src=${Places[0].image} />`;
     cityButtonCss(120,80,80);
-
 });
-
-
 
 //*********************** İkinci Şehir */
 document.getElementById("city2").addEventListener("click", () => {
 
     places.innerHTML = "";
     buttonCreate();
-    const placeBtn = document.querySelectorAll(".placeBtn");
-
-    for (let n = 0; n < placeBtn.length; n++) {
-        placeBtn[n].innerHTML = `${Places2[n].name}`;
-        placeBtn[n].addEventListener("click", (e) => {
-            imageBox.innerHTML = `<img src=${Places2[n].image} />`;
-            // placeBtn[n].innerHTML = `${Places2[n].name}`;
-            if(e.target.id === placeBtn[0].id){
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[1].style.backgroundColor =" gold";
-                placeBtn[2].style.backgroundColor =" gold";
-            } 
-            else if(e.target.id === placeBtn[1].id){
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[0].style.backgroundColor =" gold";
-                placeBtn[2].style.backgroundColor =" gold";
-            }else{
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[1].style.backgroundColor =" gold";
-                placeBtn[0].style.backgroundColor =" gold";
-            }
-            
-        });
-    }
+    sehirResimDegistirme(Places2)
     imageBox.innerHTML = `<img src=${Places2[0].image} />`;
     cityButtonCss(80,120,80);
 });
-
-
 
 //*********************** Üçüncü Şehir */
 document.getElementById("city3").addEventListener("click", () => {
 
     places.innerHTML = "";
     buttonCreate();
-    const placeBtn = document.querySelectorAll(".placeBtn");
-
-    for (let n = 0; n < placeBtn.length; n++) {
-        placeBtn[n].innerHTML = `${Places3[n].name}`;
-        placeBtn[n].addEventListener("click", (e) => {
-            imageBox.innerHTML = `<img src=${Places3[n].image} />`;
-            // placeBtn[n].innerHTML = `${Places3[n].name}`;
-            if(e.target.id === placeBtn[0].id){
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[1].style.backgroundColor =" gold";
-                placeBtn[2].style.backgroundColor =" gold";
-            } 
-            else if(e.target.id === placeBtn[1].id){
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[0].style.backgroundColor =" gold";
-                placeBtn[2].style.backgroundColor =" gold";
-            }else{
-                e.target.style.backgroundColor = "rgb(192, 164, 8)";
-                placeBtn[1].style.backgroundColor =" gold";
-                placeBtn[0].style.backgroundColor =" gold";
-            }
-            
-        });
-    }
+    sehirResimDegistirme(Places3);
     imageBox.innerHTML = `<img src=${Places3[0].image} />`;
     cityButtonCss(80,80,120);
 });
 
 function buttonCreate(){
-    
     const placeBtn0 = document.createElement("button");
     placeBtn0.className = "placeBtn";
     placeBtn0.id ="no1";
@@ -134,3 +57,27 @@ function cityButtonCss(birim1,birim2,birim3){
 
 
 
+function sehirResimDegistirme(yerAdi){
+    const placeBtn = document.querySelectorAll(".placeBtn");
+    for (let n = 0; n < placeBtn.length; n++) {
+        placeBtn[n].innerHTML = `${yerAdi[n].name}`;
+        placeBtn[n].addEventListener("click", (e) => {
+            imageBox.innerHTML = `<img src=${yerAdi[n].image} />`;
+            // placeBtn[n].innerHTML = `${Places3[n].name}`;
+            if(e.target.id === placeBtn[0].id){
+                e.target.style.backgroundColor = "rgb(192, 164, 8)";
+                placeBtn[1].style.backgroundColor =" gold";
+                placeBtn[2].style.backgroundColor =" gold";
+            } 
+            else if(e.target.id === placeBtn[1].id){
+                e.target.style.backgroundColor = "rgb(192, 164, 8)";
+                placeBtn[0].style.backgroundColor =" gold";
+                placeBtn[2].style.backgroundColor =" gold";
+            }else{
+                e.target.style.backgroundColor = "rgb(192, 164, 8)";
+                placeBtn[1].style.backgroundColor =" gold";
+                placeBtn[0].style.backgroundColor =" gold";
+            }
+        });
+    }
+}
