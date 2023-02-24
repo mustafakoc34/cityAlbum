@@ -1,6 +1,6 @@
 
 const imageBox = document.querySelector(".imageBox");
-const places = document.getElementById("places");
+const buttonPlaces = document.getElementById("button-places");
 
 // *********************** Birinci Şehir */
 document.getElementById("city1").addEventListener("click", () => {
@@ -24,19 +24,19 @@ document.getElementById("city3").addEventListener("click", () => {
 });
 
 function buttonCreate(){
-    places.innerHTML = "";
+    buttonPlaces.innerHTML = "";
     const placeBtn0 = document.createElement("button");
     placeBtn0.className = "placeBtn";
     placeBtn0.id ="no1";
-    places.appendChild(placeBtn0);
+    buttonPlaces.appendChild(placeBtn0);
     const placeBtn1 = document.createElement("button");
     placeBtn1.className = "placeBtn";
     placeBtn1.id ="no2";
-    places.appendChild(placeBtn1);
+    buttonPlaces.appendChild(placeBtn1);
     const placeBtn2 = document.createElement("button");
     placeBtn2.className = "placeBtn";
     placeBtn2.id ="no3";
-    places.appendChild(placeBtn2);
+    buttonPlaces.appendChild(placeBtn2);
 }
 
 function cityButtonCss(birim1,birim2,birim3){
