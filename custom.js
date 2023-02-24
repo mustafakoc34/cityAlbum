@@ -2,27 +2,6 @@
 const imageBox = document.querySelector(".imageBox");
 const buttonPlaces = document.getElementById("button-places");
 
-// *********************** Birinci Şehir */
-document.getElementById("city1").addEventListener("click", () => {
-    buttonCreate();
-    sehirResimDegistirme(Places)
-    cityButtonCss(120,80,80);
-});
-
-//*********************** İkinci Şehir */
-document.getElementById("city2").addEventListener("click", () => {
-    buttonCreate();
-    sehirResimDegistirme(Places2)
-    cityButtonCss(80,120,80);
-});
-
-//*********************** Üçüncü Şehir */
-document.getElementById("city3").addEventListener("click", () => {
-    buttonCreate();
-    sehirResimDegistirme(Places3);
-    cityButtonCss(80,80,120);
-});
-
 function buttonCreate(){
     buttonPlaces.innerHTML = "";
     const placeBtn0 = document.createElement("button");
@@ -73,3 +52,27 @@ function sehirResimDegistirme(yerAdi){
     }
     imageBox.innerHTML = `<img src=${yerAdi[0].image} />`;
 }
+
+
+// *********************** Birinci Şehir */
+document.getElementById("city1").addEventListener("click", () => {
+    buttonCreate();
+    sehirResimDegistirme(Places)
+    cityButtonCss(120,80,80);
+});
+
+//*********************** İkinci Şehir */
+document.getElementById("city2").addEventListener("click", () => {
+    buttonCreate();
+    sehirResimDegistirme(Places2)
+    cityButtonCss(80,120,80);
+});
+
+//*********************** Üçüncü Şehir */
+document.getElementById("city3").addEventListener("click", () => {
+    buttonCreate();
+    sehirResimDegistirme(Places3);
+    cityButtonCss(80,80,120);
+});
+
+
